@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": -93.6,
+      "left": -132.6,
+      "attrs": { "volume": "0.1" }
+    },
+    { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": -130.4, "left": 21.42, "attrs": {} }
+  ],
+  "connections": [
+    [ "bz1:2", "mega:8", "green", [ "v0", "h278" ] ],
+    [ "bz1:1", "mega:GND.3", "green", [ "v230.4", "h268.8" ] ],
+    [ "pir1:OUT", "mega:2", "green", [ "v9.6", "h163.06" ] ],
+    [ "pir1:GND", "mega:GND.2", "black", [ "v19.2", "h-115.46", "v259.2", "h211.2" ] ],
+    [ "pir1:VCC", "mega:5V", "red", [ "v9.6", "h-115.2", "v288", "h220.8" ] ]
+  ],
+  "dependencies": {}
+}

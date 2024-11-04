@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "author": "Rohan K",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 87, "left": -70.8, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "sevseg1",
+      "top": -51.78,
+      "left": 183.52,
+      "attrs": { "digits": "4" }
+    },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "ultrasonic1",
+      "top": -65.7,
+      "left": -109.7,
+      "attrs": { "distance": "132" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 326.3,
+      "left": 243.5,
+      "rotate": 90,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "ultrasonic1:GND", "mega:GND.1", "black", [ "v28.8", "h37.2" ] ],
+    [ "ultrasonic1:VCC", "mega:5V", "red", [ "v19.2", "h-67.2", "v259.2", "h182.4" ] ],
+    [ "ultrasonic1:ECHO", "mega:13", "green", [ "v19.2", "h56.8" ] ],
+    [ "ultrasonic1:TRIG", "mega:5", "gold", [ "v9.6", "h143.6" ] ],
+    [ "sevseg1:A", "mega:6", "#8f4814", [ "v-38.4", "h-86.4", "v0", "h-57.6" ] ],
+    [ "sevseg1:B", "mega:7", "orange", [ "v-48", "h-182.4" ] ],
+    [ "sevseg1:C", "mega:8", "gray", [ "v8.76", "h-192" ] ],
+    [ "sevseg1:D", "mega:9", "blue", [ "v37.56", "h-163.2" ] ],
+    [ "sevseg1:E", "mega:10", "green", [ "v27.96", "h-163.19" ] ],
+    [ "sevseg1:F", "mega:11", "gray", [ "v-9.6", "h-172.8" ] ],
+    [ "sevseg1:G", "mega:12", "violet", [ "v47.16", "h-220.8" ] ],
+    [ "sevseg1:DIG2", "mega:3", "green", [ "v-28.8", "h-105.6" ] ],
+    [ "sevseg1:DIG3", "mega:4", "cyan", [ "v-19.2", "h-144" ] ],
+    [ "sevseg1:DIG4", "mega:2", "green", [ "v56.76", "h-134.4" ] ],
+    [ "btn1:2.l", "mega:GND.2", "green", [ "v-19.2", "h-163.4" ] ],
+    [ "btn1:1.l", "mega:25", "green", [ "v-19.2", "h67.2", "v-201.6" ] ]
+  ],
+  "dependencies": {}
+}

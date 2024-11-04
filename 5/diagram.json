@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "author": "Anonymous maker",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-mega", "id": "mega", "top": 39, "left": 6, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -150.17, "left": 35.2, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -80.2,
+      "left": -144,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn2",
+      "top": 35,
+      "left": -230.4,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:RS", "mega:12", "green", [ "v19.2", "h9.9" ] ],
+    [ "lcd1:E", "mega:11", "green", [ "v9.6", "h38.4" ] ],
+    [ "lcd1:D4", "mega:5", "green", [ "v28.8", "h48" ] ],
+    [ "lcd1:D5", "mega:4", "green", [ "v19.2", "h57.7" ] ],
+    [ "lcd1:D6", "mega:3", "green", [ "v9.6", "h57.8" ] ],
+    [ "lcd1:D7", "mega:2", "green", [ "v19.2", "h57.9" ] ],
+    [ "lcd1:VSS", "mega:GND.2", "green", [ "v28.8", "h-67.2", "v259.2", "h182.4" ] ],
+    [ "lcd1:VDD", "mega:5V", "green", [ "v57.6", "h-95.9", "v259.2", "h182.4" ] ],
+    [ "btn1:1.r", "mega:GND.3", "green", [ "v0", "h29", "v374.4", "h240" ] ],
+    [ "btn1:2.r", "mega:6", "green", [ "h57.8", "v57.8", "h220.8", "v9.6" ] ],
+    [ "btn2:1.r", "mega:GND.2", "green", [ "v0", "h86.6", "v278.4", "h259.2" ] ],
+    [ "btn2:2.r", "mega:7", "green", [ "h48.2", "v-47.8", "h307.2" ] ]
+  ],
+  "dependencies": {}
+}
